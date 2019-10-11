@@ -50,20 +50,23 @@ console.log("User flipped " + cardFour);*/
 	
 	function flipCard(cardId) {  
 		checkForMatch();
-		var cardOne = cards[0];
+		var cardOne = cards[cardId];
 		cardsInPlay.push(cardOne);
+		checkForMatch();
 		console.log("User flipped " + cardOne);
 		
-		var cardTwo = cards[2];
+		var cardTwo = cards[cardId];
 		cardsInPlay.push(cardTwo);
-		console.log("User flipped " + cardTwo);
+		checkForMatch();
+		 console.log("User flipped " + cardTwo);
 	
-		console.log("User flipped" + cards[cardId].rank)
+		console.log("User flipped " + cards[cardId].rank)
+		console.log(cards[cardId].cardImage);
+		console.log(cards[cardId].suit);
 	
-		cardsInPlay.push(cardId.rank);
-		
-		console.log(cards[2])
-	
+		 cardsInPlay.push(cards[cardId].rank);
+		console.log(cards[cardId].cardImage);
 	}
+	
 	flipCard(0);
-	flipCard(2);
+	 flipCard(2);
