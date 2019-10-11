@@ -16,36 +16,54 @@ console.log("User flipped " + cardFour);*/
 	(cardsInPlay[0] === cardsInPlay[2]);
 		alert("Sorry, try again.");
 	}*/
-const cards = { 
+	const cards = [
+		{ 
+		rank: "queen",
+		suit: "hearts",
+		cardImage: "images/queen-of-hearts.png"
+	},
+		{
+		rank: "queen",
+		suit: "diamonds",
+		cardImage: "images/queen-of-diamonds.png"
+		},
+		{ rank: "king",
+		suit: "hearts",
+		cardImage: "images/king-of-hearts.png"
+			
+		},
+		{
+		rank: "king",
+		suit: "diamonds",
+		cardImage: "images/king-of-diamonds.png"	
+		}
+	]
+	const cardsInPlay = [];
+	function checkForMatch() {
+		if (cardsInPlay[0] === cardsInPlay[1]) {
+			console.log("You found a match!");
+		  } else {
+			console.log("Sorry, try again.");
+		  }	
+		
+	}
 	
-
-};
-const cardsInPlay = [];
-function checkForMatch() {
-	if (cardsInPlay[0] === cardsInPlay[1]) {
-		console.log("You found a match!");
-	  } else {
-		console.log("Sorry, try again.");
-	  }	
+	function flipCard(cardId) {  
+		checkForMatch();
+		var cardOne = cards[0];
+		cardsInPlay.push(cardOne);
+		console.log("User flipped " + cardOne);
+		
+		var cardTwo = cards[2];
+		cardsInPlay.push(cardTwo);
+		console.log("User flipped " + cardTwo);
 	
-}
-checkForMatch();
-function flipCard(cardId) {
-	var cardOne = cards[0];
-	cardsInPlay.push(cardOne);
-	console.log("User flipped " + cardOne);
+		console.log("User flipped" + cards[cardId].rank)
 	
-	var cardTwo = cards[2];
-	cardsInPlay.push(cardTwo);
-	console.log("User flipped " + cardTwo);
-
-	console.log("User flipped" + cards[cardId])
-
-	cardsInPlay.push(cardId);
-}
-flipCard(0);
-flipCard(2);
-
-
-
-
+		cardsInPlay.push(cardId.rank);
+		
+		console.log(cards[2])
+	
+	}
+	flipCard(0);
+	flipCard(2);
