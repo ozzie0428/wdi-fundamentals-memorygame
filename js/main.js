@@ -53,20 +53,43 @@ console.log("User flipped " + cardFour);*/
 		var cardOne = cards[cardId];
 		cardsInPlay.push(cardOne);
 		checkForMatch();
-		console.log("User flipped " + cardOne);
+		// console.log("User flipped " + cardOne);
 		
 		var cardTwo = cards[cardId];
 		cardsInPlay.push(cardTwo);
 		checkForMatch();
-		 console.log("User flipped " + cardTwo);
+		//  console.log("User flipped " + cardTwo);
 	
-		console.log("User flipped " + cards[cardId].rank)
-		console.log(cards[cardId].cardImage);
-		console.log(cards[cardId].suit);
+		// console.log("User flipped " + cards[cardId].rank)
+		// console.log(cards[cardId].cardImage);
+		// console.log(cards[cardId].suit);
 	
 		 cardsInPlay.push(cards[cardId].rank);
-		console.log(cards[cardId].cardImage);
+		// console.log(cards[cardId].cardImage);
 	}
 	
 	flipCard(0);
 	 flipCard(2);
+	 
+	 function createBoard(){
+		// // var cardElement = document.createElement('img');
+		//  var cardElement = document.createElement("img");
+		 var cardElement = document.createElement("img");
+		 cardElement.setAttribute('src', src = "images/back.png");
+		 document.getElementsByTagName("board clearfix").appendChild(cardElement);
+		// for (var i = 0; i < cards.length; i++) {
+		// 	console.log('index',i);
+		// 	var cardElement = document.createElement("img");
+		// 	console.log('cardelement',cardElement);
+
+		// 	cardElement.setAttribute('src', src="images/back.png");
+		// 	// console.log('cardelement',cardElement);
+		// 	// cardElement.setAttribute(`img`, cardElement);
+			
+		// }
+		
+		
+	 }
+
+createBoard()
+	 
